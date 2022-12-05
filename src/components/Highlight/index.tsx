@@ -1,4 +1,4 @@
-import { Container, Title, Subtitle } from "./style";
+import { Container, Title, Subtitle } from "./styles";
 
 type HighlightProps = {
     title: string;
