@@ -24,7 +24,10 @@ export function Groups() {
           <ListEmpty message="Nenhuma turma foi cadastrada. Que tal cadastrar a primeira turma?" />
         )}
       />
-      <Button title="Criar uma turma" />
+      <Button
+        onPress={() => setGroups(['Turma Teste'])}
+        title="Criar uma turma"
+      />
     </Container>
   )
 }

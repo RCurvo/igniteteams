@@ -1,21 +1,25 @@
-import { ThemeProvider } from 'styled-components';
-import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
-import theme from './src/theme';
-import { StatusBar } from 'react-native';
+import { ThemeProvider } from 'styled-components'
+import {
+  useFonts,
+  Roboto_400Regular as robotoRegular,
+  Roboto_700Bold as robotoBold,
+} from '@expo-google-fonts/roboto'
+import theme from './src/theme'
+import { StatusBar } from 'react-native'
 
-import { Loading } from '@components/Loading';
-import { Groups } from '@screens/Groups';
+import { Loading } from '@components/Loading'
+import { NewGroup } from '@screens/NewGroup'
 
 export default function App() {
-  const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
+  const [fontsLoaded] = useFonts({ robotoRegular, robotoBold })
   return (
     <ThemeProvider theme={theme}>
       <StatusBar
         barStyle="light-content"
-        backgroundColor='transparent'
+        backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <Groups /> : <Loading />}
+      {fontsLoaded ? <NewGroup /> : <Loading />}
     </ThemeProvider>
   )
-};
+}
