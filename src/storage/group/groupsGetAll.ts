@@ -1,6 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { GROUP_COLLECTION } from '@storage/storageConfig'
-import { G } from 'react-native-svg'
 
 export async function groupsGetAll() {
   try {
